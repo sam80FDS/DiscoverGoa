@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiscoverGoa - Explore the Paradise of India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Discover<span>Goa</span></a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#itinerary">Itinerary</a></li>
+                    <li><a href="#statistics">Statistics</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover the Magic of Goa</h1>
+            <p>Explore pristine beaches, vibrant culture, and unforgettable experiences in India's coastal paradise.</p>
+            <div class="cta-buttons">
+                <a href="#attractions" class="btn primary">Explore Now</a>
+                <a href="#itinerary" class="btn secondary">Plan Your Trip</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Top Attractions Section -->
+    <section class="section attractions" id="attractions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Attractions in Goa</h2>
+                <p>Discover the most popular destinations that make Goa a traveler's paradise</p>
+            </div>
+            <div class="tabs">
+                <div class="tab-header">
+                    <div class="tab-btn active" data-tab="beaches">Beaches</div>
+                    <div class="tab-btn" data-tab="landmarks">Landmarks</div>
+                    <div class="tab-btn" data-tab="culture">Culture</div>
+                    <div class="tab-btn" data-tab="nature">Nature</div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="beaches">
+                        <div class="attractions-grid" id="beaches-container">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="landmarks">
+                        <div class="attractions-grid" id="landmarks-container">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="culture">
+                        <div class="attractions-grid" id="culture-container">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="nature">
+                        <div class="attractions-grid" id="nature-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section statistics" id="statistics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tourism Statistics</h2>
+                <p>Key data about visitor trends in Goa</p>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="stat-value" data-count="8.2">1,04,09,196</h3>
+                    <p class="stat-label">Total Visitors (2024)</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="stat-value" data-count="65">322</h3>
+                    <p class="stat-label">International Flights Weekly</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="stat-value" data-count="50">35+</h3>
+                    <p class="stat-label">Beaches to Explore</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="stat-value" data-count="300">200+</h3>
+                    <p class="stat-label">Sunny Days Per Year</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="visitorsChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Goa in Pictures</h2>
+                <p>Visual journey through Goa's stunning landscapes and vibrant culture</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/1254346739/photo/beach-in-goa-india.jpg?s=612x612&w=0&k=20&c=-lgD5-7UMihYptAdCvlnLe0LHJ4V4X0kJgY5krJ0QWY=" alt="Calangute Beach">
+                    <div class="gallery-overlay">
+                        <h3>Calangute Beach</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/667169910/photo/chapora-fort-in-goa.jpg?s=612x612&w=0&k=20&c=vvgOTXZSUKbi8xUQGUlvYWSninT-mQxpv-KXcqFHFMQ=" alt="Chapora Fort">
+                    <div class="gallery-overlay">
+                        <h3>Chapora Fort</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://share.google/zfM2dK8JgxAID3T7Y" alt="Goan Fish Curry">
+                    <div class="gallery-overlay">
+                        <h3>Goan Fish Curry</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/2161433751/photo/exterior-view-of-the-basilica-of-bom-jesus-in-daylight.jpg?s=612x612&w=0&k=20&c=OCx3c8Z-9xmyB5hiQydSCOTEXwFLbyMKFfLC7TFErwM=" alt="Basilica of Bom Jesus">
+                    <div class="gallery-overlay">
+                        <h3>Basilica of Bom Jesus</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://share.google/Mf9y35TKp3knTpbuL" alt="Palolem Beach">
+                    <div class="gallery-overlay">
+                        <h3>Palolem Beach</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://in.eventfaqs.com/wp-content/uploads/sites/2/2025/01/carnaval11.jpg" alt="Goa Carnival">
+                    <div class="gallery-overlay">
+                        <h3>Goa Carnival</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn primary" id="viewMoreBtn">View More Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Planner Section -->
+    <section class="section itinerary" id="itinerary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plan Your Goa Itinerary</h2>
+                <p>Customize your perfect Goa trip with our interactive planner</p>
+            </div>
+            <div class="itinerary-planner">
+                <div class="planner-steps">
+                    <div class="step active" data-step="1">
+                        <span>1</span>
+                        <p>Trip Duration</p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span>2</span>
+                        <p>Interests</p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span>3</span>
+                        <p>Budget</p>
+                    </div>
+                    <div class="step" data-step="4">
+                        <span>4</span>
+                        <p>Details</p>
+                    </div>
+                </div>
+                <form id="itineraryForm" class="planner-form">
+                    <div class="form-step active" data-step="1">
+                        <h3>How many days will you spend in Goa?</h3>
+                        <div class="form-group">
+                            <div class="radio-option">
+                                <input type="radio" id="3days" name="duration" value="3" checked>
+                                <label for="3days">3 Days (Weekend Getaway)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="5days" name="duration" value="5">
+                                <label for="5days">5 Days (Extended Vacation)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="7days" name="duration" value="7">
+                                <label for="7days">7+ Days (Full Experience)</label>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn next-btn">Next</button>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="2">
+                        <h3>What are your main interests?</h3>
+                        <div class="form-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="beaches" name="interests" value="beaches" checked>
+                                <label for="beaches">Beaches & Water Sports</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="history" name="interests" value="history">
+                                <label for="history">History & Architecture</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="nightlife" name="interests" value="nightlife">
+                                <label for="nightlife">Nightlife & Parties</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="nature" name="interests" value="nature">
+                                <label for="nature">Nature & Wildlife</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="food" name="interests" value="food">
+                                <label for="food">Food & Culture</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="adventure" name="interests" value="adventure">
+                                <label for="adventure">Adventure Activities</label>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn prev-btn">Previous</button>
+                            <button type="button" class="btn next-btn">Next</button>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="3">
+                        <h3>What's your approximate budget per day?</h3>
+                        <div class="form-group">
+                            <div class="radio-option">
+                                <input type="radio" id="budget1" name="budget" value="2000" checked>
+                                <label for="budget1">₹2000-3000 (Budget)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="budget2" name="budget" value="5000">
+                                <label for="budget2">₹3000-5000 (Mid-range)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="budget3" name="budget" value="8000">
+                                <label for="budget3">₹5000+ (Luxury)</label>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn prev-btn">Previous</button>
+                            <button type="button" class="btn next-btn">Next</button>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="4">
+                        <h3>Almost done! Just a few more details</h3>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label for="travelers">Number of Travelers</label>
+                                <input type="number" id="travelers" name="travelers" min="1" max="10" value="2">
+                            </div>
+                            <div class="input-group">
+                                <label for="season">Preferred Season</label>
+                                <select id="season" name="season">
+                                    <option value="winter">Winter (Nov-Feb)</option>
+                                    <option value="summer">Summer (Mar-May)</option>
+                                    <option value="monsoon">Monsoon (Jun-Oct)</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email (Optional)</label>
+                                <input type="email" id="email" name="email" placeholder="For sending itinerary">
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn prev-btn">Previous</button>
+                            <button type="submit" class="btn primary">Generate Itinerary</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="itinerary-result" id="itineraryResult">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Traveler Testimonials</h2>
+                <p>What visitors say about their Goa experience</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Goa exceeded all my expectations! The beaches are pristine, the food is incredible, and the people are so welcoming. I can't wait to go back!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://share.google/JP4kHe0JGtPB1VA8C" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>From UK, Visited Jan 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"The perfect blend of relaxation and adventure. We enjoyed water sports by day and beach parties by night. Goa truly knows how to have fun!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://share.google/Y0tfUeZ8LAWhnpqXA" alt="Raj Patel">
+                            <div class="author-info">
+                                <h4>Raj Patel</h4>
+                                <p>From Mumbai, Visited Dec 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a history buff, I loved exploring Goa's Portuguese heritage. The churches and forts are magnificent, and the local guides were very knowledgeable."</p>
+                        <div class="testimonial-author">
+                            <img src="https://lucid.content-delivery-one.com/cdn-cgi/image/w=600,format=auto,metadata=none/66e2e5fbe0cca.png" alt="Maria Gonzalez">
+                            <div class="author-info">
+                                <h4>Maria Gonzalez</h4>
+                                <p>From Spain, Visited Feb 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+ <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Have questions about visiting Goa? Get in touch!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Panaji, Goa, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+91 832 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>info@discovergoa.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>Mon-Sat: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="contactEmail" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col about">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#attractions">Attractions</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#itinerary">Itinerary</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col links">
+                    <h3>Useful Resources</h3>
+                    <ul>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">Best Time to Visit</a></li>
+                        <li><a href="#">Local Cuisine</a></li>
+                        <li><a href="#">Transportation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on Goa travel deals and tips.</p>
+                    <form id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DiscoverGoa. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
